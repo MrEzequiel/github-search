@@ -1,6 +1,18 @@
+.progress-bar {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+
+  background: linear-gradient(to right, #9651d0, #cc93fc);
+  width: 0;
+  height: 1rem;
+
+  transition: all 500ms;
+}
+
 #header {
-  height: 10rem;
-  padding: 0 3rem;
+  height: 13rem;
+  padding: 3rem;
   justify-content: space-between;
 }
 
@@ -29,8 +41,8 @@
 }
 
 main {
-  min-height: 70vh;
-  margin: 3.5rem 0;
+  min-height: 50vh;
+  margin: 3.5rem 0 6.6rem;
   padding: 3rem;
 }
 
@@ -125,6 +137,17 @@ main {
 
   row-gap: 2.5rem;
   column-gap: 1.5rem;
+}
+
+#repositories.not-repositories {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#repositories.not-repositories img {
+  width: 50rem;
 }
 
 #repositories .repository {

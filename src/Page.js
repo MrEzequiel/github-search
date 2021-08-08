@@ -5,6 +5,7 @@ const userName = localStorage.getItem('user')
 
 const pageCreate = {
   async profileCreate() {
+    document.querySelector('.progress-bar').style.width = '50%'
     const userInfo = await getUserAttributes.findUser(userName)
 
     let userInformations = {
@@ -24,11 +25,20 @@ const pageCreate = {
 
     if (userInformations.repo != 0) {
       this.repositoryCreate(userInformations.repos_url)
+    } else {
+      document.querySelector('.progress-bar').style.display = 'none'
+
+      document.querySelector('#repositories').classList.add('not-repositories')
+      document.querySelector('#repositories').innerHTML = `
+        <img src="../assets/coding.png" />
+        <h3>User did not create repositories :( </h3>
+      `
     }
   },
 
   async repositoryCreate(repos) {
     let repositories = []
+    document.querySelector('.progress-bar').style.width = '100%'
     const totalRepository = await getUserAttributes.getRepository(repos)
 
     for (let repo of totalRepository) {
@@ -39,6 +49,9 @@ const pageCreate = {
 
     for (index; index >= 0; index--) {
       View.renderRepository(repositories[index])
+      if (index >= 0) {
+        document.querySelector('.progress-bar').style.display = 'none'
+      }
     }
   }
 }

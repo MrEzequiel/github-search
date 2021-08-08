@@ -71,6 +71,52 @@ main .search {
 }
 
 .search .alert {
-  text-align: center;
+  margin: 0 auto;
+}
+
+.search .alert {
   font-size: 2rem;
+  display: none;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: loading 1.3s infinite;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 1rem;
+  box-shadow: 0px 10px 4px -2px #00000038;
+  border-radius: 50%;
+  background: linear-gradient(to right, #9651d0, #cc93fc);
+
+  transition: transform 800ms ease;
+}
+
+.search .alert.not-found {
+  background: transparent;
+  text-align: center;
+  animation: none;
+  border-radius: 1rem;
+  box-shadow: none;
+  width: max-content;
+  height: max-content;
+}
+
+.search .alert.not-found img {
+  width: 8rem;
+}
+
+@keyframes loading {
+  25% {
+    transform: translateX(2rem);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

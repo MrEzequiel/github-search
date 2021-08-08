@@ -2,6 +2,7 @@ import { getUserAttributes } from './src/User.js'
 
 const searchUser = async e => {
   e.preventDefault()
+  warningOnScreen.clear()
   let user = document.getElementById('input-search').value
 
   if (user != '') {
@@ -22,12 +23,19 @@ const searchUser = async e => {
 
 const warningOnScreen = {
   loading() {
-    document.querySelector('.alert').innerHTML = 'Carregando'
+    document.querySelector('.alert').style.display = 'flex'
   },
   notFound() {
-    document.querySelector('.alert').innerHTML = 'Não encontrado'
+    document.querySelector('.alert').classList.add('not-found')
+    document.querySelector('.alert').style.display = 'flex'
+    document.querySelector('.alert').innerHTML = `
+    <img src="./assets/lost.png" />
+    Not found user
+    `
   },
   clear() {
+    document.querySelector('.alert').classList.remove('not-found')
+    document.querySelector('.alert').style.display = 'none'
     document.querySelector('.alert').innerHTML = ''
   }
 }
