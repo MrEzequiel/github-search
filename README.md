@@ -29,13 +29,13 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O github search foi desenvolvido consumindo uma API externa: [GitHubDocs](.https://docs.github.com/pt/rest).
+O github search foi desenvolvido consumindo uma API externa: <a href="https://docs.github.com/pt/rest">GitHubDocs</a>.
 <br>
 Treinando a compreensão em requisições, funções assícronas, JS ES6+ usando module e desenvolvimento de layouts.
 
 ## 🔖 Challenge
 
-A ideia desta aplicação é de um site de desafios para programadores: [DevChallenge](.https://www.devchallenge.com.br/challenges/6010b6ad1194ca0021a24f31/details).
+A ideia desta aplicação é de um site de desafios para programadores: <a href="https://www.devchallenge.com.br/challenges/6010b6ad1194ca0021a24f31/details">DevChallenge</a>.
 
 ## 👨‍💻 Autor
 
@@ -45,4 +45,4 @@ A ideia desta aplicação é de um site de desafios para programadores: [DevChal
 
 <hr>
 <br>
-<h2 align="center">Feito com ♥ by Ezequiel ⭐️</h2>
+<h2 align="center">Feito com ♥ por Ezequiel ⭐️</h2>
