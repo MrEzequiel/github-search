@@ -1,0 +1,258 @@
+#header {
+  height: 10rem;
+  padding: 0 3rem;
+  justify-content: space-between;
+}
+
+#header .image-header {
+  width: 18rem;
+}
+
+#header .image-header img {
+  width: 100%;
+}
+
+#header .button-back {
+  background: transparent;
+  color: #cc93fc;
+
+  transition: transform 250ms ease-in-out;
+}
+
+.button-back .back-page {
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+#header .button-back:hover {
+  transform: translateX(-0.75rem);
+}
+
+main {
+  min-height: 70vh;
+  margin: 3.5rem 0;
+  padding: 3rem;
+}
+
+#user-profile {
+  width: min(95rem, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-template-columns: 20rem 2fr 1fr;
+  gap: 3rem;
+}
+
+#user-profile .image-user {
+  width: 100%;
+  clip-path: circle();
+}
+
+#user-profile .image-user img {
+  width: 100%;
+  display: block;
+}
+
+#user-profile .information-user {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.user-name .name-user {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+
+  color: #9651d0;
+  font-size: 3rem;
+  font-family: 'Secular One', sans-serif;
+
+  transition: text-shadow 250ms;
+}
+
+.user-name .name-user span {
+  font-size: 3rem;
+}
+
+.user-name .name-user:hover {
+  text-shadow: 0.3rem 0.3rem 0.2rem black;
+}
+
+.more-information .localization {
+  display: flex;
+  gap: 2rem;
+
+  margin-bottom: 0.5rem;
+}
+
+.more-information .social {
+  display: flex;
+  gap: 2rem;
+}
+
+.more-information .icons {
+  gap: 0.5rem;
+}
+
+.more-information .icons span {
+  color: #9651d0;
+}
+
+#user-profile .repository-total {
+  text-align: center;
+  padding: 2rem 0.5rem;
+  font-size: 2rem;
+  background: #1b1919;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  min-height: 8rem;
+}
+
+.repository .icon-fork {
+  gap: 0.5rem;
+}
+
+#repositories {
+  margin-top: 6.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  row-gap: 2.5rem;
+  column-gap: 1.5rem;
+}
+
+#repositories .repository {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 1rem 1.5rem;
+  width: 35rem;
+  min-height: 16rem;
+
+  background: #1b1919;
+  border-radius: 0.5rem;
+
+  font-size: 1.4rem;
+
+  box-shadow: 0px 0px 8px 3px #00000070;
+  border: 1px solid rgba(158, 158, 158, 0.24);
+
+  transition: box-shadow 250ms, transform 250ms;
+}
+
+#repositories .repository:hover {
+  box-shadow: none;
+  transform: scale(0.98);
+}
+
+.repository .status-repository {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.repository .title-repository a {
+  display: inline-flex;
+  align-items: center;
+
+  color: #9651d0;
+  font-size: 2rem;
+  font-family: 'Secular One', sans-serif;
+  gap: 1rem;
+
+  transition: text-shadow 250ms;
+}
+
+.repository .title-repository a:hover {
+  text-shadow: 0.3rem 0.3rem 0.2rem black;
+}
+
+.status-repository div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-repository div span {
+  color: #9651d0;
+}
+
+#footer {
+  min-height: 20rem;
+
+  background: #1b1919;
+  padding: 2rem 2.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#footer .social-network {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#footer .social-network a {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+
+  transition: transform 250ms;
+}
+
+.social-network a:hover {
+  transform: translateY(-0.5rem);
+}
+
+#footer .social-network img {
+  width: 4rem;
+  height: auto;
+}
+
+@media (max-width: 750px) {
+  #user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    gap: 3rem;
+  }
+
+  #user-profile .image-user {
+    width: min(20rem, 70%);
+  }
+
+  #user-profile .information-user {
+    gap: 1.5rem;
+  }
+
+  .information-user .more-information div {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 700px) {
+  #repositories .repository {
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  #footer {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
